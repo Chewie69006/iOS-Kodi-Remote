@@ -14,7 +14,9 @@
 		63355E591B764D4B00693FBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63355E571B764D4B00693FBA /* LaunchScreen.xib */; };
 		63355E651B764D4B00693FBA /* iOS_Kodi_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E641B764D4B00693FBA /* iOS_Kodi_RemoteTests.swift */; };
 		63355E701B764D8D00693FBA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 63355E6E1B764D8D00693FBA /* LICENSE */; };
-		63355E711B764D8D00693FBA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 63355E6F1B764D8D00693FBA /* README.md */; };
+		63355E7B1B765EA200693FBA /* HostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E7A1B765EA200693FBA /* HostManager.swift */; };
+		63355E871B76912700693FBA /* HostInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E861B76912700693FBA /* HostInformation.swift */; };
+		63355E8B1B76931600693FBA /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E8A1B76931600693FBA /* Array+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		63355E641B764D4B00693FBA /* iOS_Kodi_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Kodi_RemoteTests.swift; sourceTree = "<group>"; };
 		63355E6E1B764D8D00693FBA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		63355E6F1B764D8D00693FBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		63355E7A1B765EA200693FBA /* HostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostManager.swift; sourceTree = "<group>"; };
+		63355E861B76912700693FBA /* HostInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostInformation.swift; sourceTree = "<group>"; };
+		63355E8A1B76931600693FBA /* Array+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 			children = (
 				63355E4E1B764D4B00693FBA /* AppDelegate.swift */,
 				63355E501B764D4B00693FBA /* ViewController.swift */,
+				63355E791B765E3600693FBA /* APIs */,
 				63355E521B764D4B00693FBA /* Main.storyboard */,
 				63355E551B764D4B00693FBA /* Images.xcassets */,
 				63355E571B764D4B00693FBA /* LaunchScreen.xib */,
@@ -116,6 +122,32 @@
 				63355E631B764D4B00693FBA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63355E791B765E3600693FBA /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				63355E881B76930500693FBA /* Additions */,
+				63355E7A1B765EA200693FBA /* HostManager.swift */,
+				63355E861B76912700693FBA /* HostInformation.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		63355E881B76930500693FBA /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				63355E891B76930500693FBA /* Array */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		63355E891B76930500693FBA /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				63355E8A1B76931600693FBA /* Array+Additions.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63355E711B764D8D00693FBA /* README.md in Sources */,
+				63355E8B1B76931600693FBA /* Array+Additions.swift in Sources */,
+				63355E871B76912700693FBA /* HostInformation.swift in Sources */,
+				63355E7B1B765EA200693FBA /* HostManager.swift in Sources */,
 				63355E511B764D4B00693FBA /* ViewController.swift in Sources */,
 				63355E4F1B764D4B00693FBA /* AppDelegate.swift in Sources */,
 			);
@@ -349,9 +383,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "iOS-Kodi-Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -359,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "iOS-Kodi-Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
