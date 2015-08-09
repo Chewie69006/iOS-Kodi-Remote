@@ -11,16 +11,19 @@ import Foundation
 class HostInformation: NSObject, Printable {
     
     var name:String! = "Kodi"
-    var port:Int! = 8080
-    var domain:String! = "local."
-
     var address:String! = nil
+    var httpPort:Int! = 8080
+    var tcpPort:Int! = 9090
+    var eventServerPort:Int! = 9777
+    
+    var domain:String! = "local."
     
     var username:String? = nil
+    var password:String? = nil
     
     init(netService:NSNetService!) {
         self.name = netService.name
-        self.port = netService.port
+        self.httpPort = netService.port
         self.domain = netService.domain
         
         if netService.addresses?.count > 0 {
@@ -37,18 +40,18 @@ class HostInformation: NSObject, Printable {
         }
     }
     
-    init(name:String!, port:Int!, domain:String!) {
+    init(name:String!, httpPort:Int!, domain:String!) {
         self.name = name
-        self.port = port
+        self.httpPort = httpPort
         self.domain = domain
     }
     
     override func isEqual(object: AnyObject?) -> Bool {
         let other:HostInformation = object as! HostInformation
-        return other.name == self.name && other.port == self.port && other.domain == self.domain && other.username == self.username && other.address == self.address
+        return other.name == self.name && other.httpPort == self.httpPort && other.domain == self.domain && other.username == self.username && other.address == self.address
     }
     
     override var description: String {
-        return "\(name) - \(address) - \(port)"
+        return "\(name) - \(address) - \(httpPort)"
     }
 }

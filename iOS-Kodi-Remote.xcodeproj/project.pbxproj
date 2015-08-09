@@ -17,6 +17,7 @@
 		63355E7B1B765EA200693FBA /* HostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E7A1B765EA200693FBA /* HostManager.swift */; };
 		63355E871B76912700693FBA /* HostInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E861B76912700693FBA /* HostInformation.swift */; };
 		63355E8B1B76931600693FBA /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E8A1B76931600693FBA /* Array+Additions.swift */; };
+		63355E8D1B77379B00693FBA /* HostFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E8C1B77379B00693FBA /* HostFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		63355E7A1B765EA200693FBA /* HostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostManager.swift; sourceTree = "<group>"; };
 		63355E861B76912700693FBA /* HostInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostInformation.swift; sourceTree = "<group>"; };
 		63355E8A1B76931600693FBA /* Array+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
+		63355E8C1B77379B00693FBA /* HostFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				63355E881B76930500693FBA /* Additions */,
 				63355E7A1B765EA200693FBA /* HostManager.swift */,
+				63355E8C1B77379B00693FBA /* HostFinder.swift */,
 				63355E861B76912700693FBA /* HostInformation.swift */,
 			);
 			path = APIs;
@@ -255,6 +258,7 @@
 				63355E7B1B765EA200693FBA /* HostManager.swift in Sources */,
 				63355E511B764D4B00693FBA /* ViewController.swift in Sources */,
 				63355E4F1B764D4B00693FBA /* AppDelegate.swift in Sources */,
+				63355E8D1B77379B00693FBA /* HostFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
