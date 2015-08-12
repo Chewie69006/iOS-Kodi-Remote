@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		632AE8881B7B6B58009DEC58 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632AE8871B7B6B58009DEC58 /* APIMethod.swift */; };
+		632AE88A1B7B6CDF009DEC58 /* Addons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632AE8891B7B6CDF009DEC58 /* Addons.swift */; };
 		63355E4F1B764D4B00693FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E4E1B764D4B00693FBA /* AppDelegate.swift */; };
 		63355E511B764D4B00693FBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E501B764D4B00693FBA /* ViewController.swift */; };
 		63355E541B764D4B00693FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63355E521B764D4B00693FBA /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		632AE8871B7B6B58009DEC58 /* APIMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
+		632AE8891B7B6CDF009DEC58 /* Addons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addons.swift; sourceTree = "<group>"; };
 		63355E491B764D4B00693FBA /* iOS-Kodi-Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Kodi-Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63355E4D1B764D4B00693FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63355E4E1B764D4B00693FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		632AE8861B7B6B44009DEC58 /* JSON RPC */ = {
+			isa = PBXGroup;
+			children = (
+				632AE8871B7B6B58009DEC58 /* APIMethod.swift */,
+				632AE8891B7B6CDF009DEC58 /* Addons.swift */,
+			);
+			path = "JSON RPC";
+			sourceTree = "<group>";
+		};
 		63355E401B764D4B00693FBA = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 		63355E791B765E3600693FBA /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				632AE8861B7B6B44009DEC58 /* JSON RPC */,
 				63355E7A1B765EA200693FBA /* HostManager.swift */,
 				63355E8C1B77379B00693FBA /* HostFinder.swift */,
 				63355E861B76912700693FBA /* HostInformation.swift */,
@@ -241,6 +255,8 @@
 				63355E511B764D4B00693FBA /* ViewController.swift in Sources */,
 				63355E4F1B764D4B00693FBA /* AppDelegate.swift in Sources */,
 				63355E8D1B77379B00693FBA /* HostFinder.swift in Sources */,
+				632AE88A1B7B6CDF009DEC58 /* Addons.swift in Sources */,
+				632AE8881B7B6B58009DEC58 /* APIMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
