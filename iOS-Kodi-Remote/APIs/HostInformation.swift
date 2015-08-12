@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HostInformation: NSObject, Printable {
+class HostInformation: NSObject {
     
     var name:String! = "Kodi"
     var address:String! = nil

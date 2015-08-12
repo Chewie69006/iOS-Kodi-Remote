@@ -10,7 +10,7 @@ import Foundation
 
 extension Array {
     mutating func removeFirst(element: Element, equality: (Element, Element) -> Bool) -> Bool {
-        for (index, item) in enumerate(self) {
+        for (index, item) in self.enumerate() {
             if equality(item, element) {
                 self.removeAtIndex(index)
                 return true
@@ -20,7 +20,7 @@ extension Array {
     }
     
     mutating func removeFirst(element: AnyObject) -> Bool {
-        for (index, item) in enumerate(self) {
+        for (index, item) in self.enumerate() {
             let itemObject:AnyObject = item as! AnyObject
             if element.isEqual(itemObject) {
                 self.removeAtIndex(index)

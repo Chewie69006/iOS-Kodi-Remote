@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         let hostManager = HostManager.sharedInstance
         hostManager.searchZeroConfHost { (foundHosts) -> Void in
-            println("\(foundHosts)")
+            print("\(foundHosts)")
         }
     }
 
