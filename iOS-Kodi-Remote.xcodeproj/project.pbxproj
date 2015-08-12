@@ -16,7 +16,6 @@
 		63355E701B764D8D00693FBA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 63355E6E1B764D8D00693FBA /* LICENSE */; };
 		63355E7B1B765EA200693FBA /* HostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E7A1B765EA200693FBA /* HostManager.swift */; };
 		63355E871B76912700693FBA /* HostInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E861B76912700693FBA /* HostInformation.swift */; };
-		63355E8B1B76931600693FBA /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E8A1B76931600693FBA /* Array+Additions.swift */; };
 		63355E8D1B77379B00693FBA /* HostFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63355E8C1B77379B00693FBA /* HostFinder.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +44,6 @@
 		63355E6F1B764D8D00693FBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		63355E7A1B765EA200693FBA /* HostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostManager.swift; sourceTree = "<group>"; };
 		63355E861B76912700693FBA /* HostInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostInformation.swift; sourceTree = "<group>"; };
-		63355E8A1B76931600693FBA /* Array+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		63355E8C1B77379B00693FBA /* HostFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,28 +127,11 @@
 		63355E791B765E3600693FBA /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				63355E881B76930500693FBA /* Additions */,
 				63355E7A1B765EA200693FBA /* HostManager.swift */,
 				63355E8C1B77379B00693FBA /* HostFinder.swift */,
 				63355E861B76912700693FBA /* HostInformation.swift */,
 			);
 			path = APIs;
-			sourceTree = "<group>";
-		};
-		63355E881B76930500693FBA /* Additions */ = {
-			isa = PBXGroup;
-			children = (
-				63355E891B76930500693FBA /* Array */,
-			);
-			path = Additions;
-			sourceTree = "<group>";
-		};
-		63355E891B76930500693FBA /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				63355E8A1B76931600693FBA /* Array+Additions.swift */,
-			);
-			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63355E8B1B76931600693FBA /* Array+Additions.swift in Sources */,
 				63355E871B76912700693FBA /* HostInformation.swift in Sources */,
 				63355E7B1B765EA200693FBA /* HostManager.swift in Sources */,
 				63355E511B764D4B00693FBA /* ViewController.swift in Sources */,

@@ -10,14 +10,14 @@ import Foundation
 
 class HostFinder : NSObject {
     
-    var completion:(Array<HostInformation>) -> Void = { (array) -> Void in }
-    var array:Array<HostInformation> = Array()
+    var completion:(NSArray) -> Void = { (array) -> Void in }
+    var array:NSMutableArray = NSMutableArray()
     
-    var running:Array<NSNetService> = Array()
+    var running:NSMutableArray = NSMutableArray()
     
     var searchingServices:Bool = false
     
-    func searchZeroConfHost(completion: (foundHosts:Array<HostInformation>) -> Void) {
+    func searchZeroConfHost(completion: (foundHosts:NSArray) -> Void) {
         self.completion = completion
         
         let netServiceBrowser = NSNetServiceBrowser()
@@ -45,7 +45,7 @@ extension HostFinder : NSNetServiceBrowserDelegate {
     */
     func netServiceBrowserWillSearch(aNetServiceBrowser: NSNetServiceBrowser) {
         print(__FUNCTION__)
-        array = Array()
+        array = NSMutableArray()
     }
     
     /* Sent to the NSNetServiceBrowser instance's delegate when the instance's previous running search request has stopped.
@@ -73,7 +73,7 @@ extension HostFinder : NSNetServiceBrowserDelegate {
     func netServiceBrowser(aNetServiceBrowser: NSNetServiceBrowser, didFindService aNetService: NSNetService, moreComing: Bool) {
         
         aNetService.delegate = self
-        running.append(aNetService)
+        running.addObject(aNetService)
         aNetService.resolveWithTimeout(10)
         
         print("\(__FUNCTION__) \(aNetService) \(moreComing)")
@@ -100,7 +100,7 @@ extension HostFinder : NSNetServiceBrowserDelegate {
         
         print("\(__FUNCTION__) \(hostInformation) \(moreComing)")
         
-        array.removeFirst(hostInformation)
+        array.removeObject(hostInformation)
     }
     
 }
@@ -136,7 +136,7 @@ extension HostFinder : NSNetServiceDelegate {
         print(__FUNCTION__)
         let hostInformation = HostInformation(netService: sender)
         
-        array.append(hostInformation)
+        array.addObject(hostInformation)
         removeRunningService(sender)
     }
     
@@ -180,7 +180,7 @@ extension HostFinder : NSNetServiceDelegate {
     }
     
     func removeRunningService(aNetService: NSNetService) {
-        running.removeFirst(aNetService)
+        running.removeObject(aNetService)
         checkIfSearchIsFinished()
     }
 }

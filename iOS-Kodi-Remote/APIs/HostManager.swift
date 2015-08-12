@@ -17,7 +17,7 @@ class HostManager : NSObject {
     
     let hostFinder:HostFinder = HostFinder()
     
-    func searchZeroConfHost(completion: (foundHosts:Array<HostInformation>) -> Void) {
+    func searchZeroConfHost(completion: (foundHosts:NSArray) -> Void) {
         hostFinder.searchZeroConfHost(completion)
     }
     
